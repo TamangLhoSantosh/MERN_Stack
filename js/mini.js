@@ -48,22 +48,28 @@
 
 // console.log(processData([1, 2, 3, 4], double));
 
-function fetchData() {
-  return new Promise((resolve) => {
-    setTimeout(() => {
-      const data = [
-        { id: 1, name: "John", age: 40 },
-        { id: 2, name: "Harry", age: 65 },
-        { id: 3, name: "Arya", age: 56 },
-      ];
-      resolve(data);
-    }, 2000);
-  });
+// function fetchData() {
+//   return new Promise((resolve) => {
+//     setTimeout(() => {
+//       const data = [
+//         { id: 1, name: "John", age: 40 },
+//         { id: 2, name: "Harry", age: 65 },
+//         { id: 3, name: "Arya", age: 56 },
+//       ];
+//       resolve(data);
+//     }, 2000);
+//   });
+// }
+
+// async function getData() {
+//   const data = await fetchData();
+//   console.log(data);
+// }
+
+// getData();
+
+function doubleArray(array) {
+  return array.map((number) => number * 2);
 }
 
-async function getData() {
-  const data = await fetchData();
-  console.log(data);
-}
-
-getData();
+console.log(doubleArray([1, 2, 3, 4, 5]));
