@@ -100,17 +100,32 @@
 // console.log(sumArray([1, 2, 3, 4, 5]));
 
 // 9. Object Manipulation
-function transform(array) {
-  return array.reduce((acc, curr) => {
-    acc[curr.id] = curr;
-    return acc;
-  }, {});
+// function transform(array) {
+//   return array.reduce((acc, curr) => {
+//     acc[curr.id] = curr;
+//     return acc;
+//   }, {});
+// }
+
+// const users = [
+//   { id: 1, name: "John", age: 40 },
+//   { id: 2, name: "Harry", age: 65 },
+//   { id: 3, name: "Arya", age: 56 },
+// ];
+
+// console.log(transform(users));
+
+// 10. Classes and Objects
+class Person {
+  constructor(name, age) {
+    this.name = name;
+    this.age = age;
+  }
+
+  describe() {
+    return `${this.name}, ${this.age} years old`;
+  }
 }
 
-const users = [
-  { id: 1, name: "John", age: 40 },
-  { id: 2, name: "Harry", age: 65 },
-  { id: 3, name: "Arya", age: 56 },
-];
-
-console.log(transform(users));
+const person = new Person("John", 40);
+console.log(person.describe());
