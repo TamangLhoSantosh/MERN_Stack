@@ -68,8 +68,14 @@
 
 // getData();
 
-function doubleArray(array) {
-  return array.map((number) => number * 2);
-}
+// function doubleArray(array) {
+//   return array.map((number) => number * 2);
+// }
 
-console.log(doubleArray([1, 2, 3, 4, 5]));
+// console.log(doubleArray([1, 2, 3, 4, 5]));
+
+// function filterArray(array) {
+//   return array.filter((number) => number < 10);
+// }
+
+// console.log(filterArray([1, 2, 3, 4, 5, 10, 20, 30]));
