@@ -116,16 +116,31 @@
 // console.log(transform(users));
 
 // 10. Classes and Objects
-class Person {
-  constructor(name, age) {
-    this.name = name;
-    this.age = age;
-  }
+// class Person {
+//   constructor(name, age) {
+//     this.name = name;
+//     this.age = age;
+//   }
 
-  describe() {
-    return `${this.name}, ${this.age} years old`;
-  }
-}
+//   describe() {
+//     return `${this.name}, ${this.age} years old`;
+//   }
+// }
 
-const person = new Person("John", 40);
-console.log(person.describe());
+// const person = new Person("John", 40);
+// console.log(person.describe());
+
+// 11. Inheritance
+// class Student extends Person {
+//   constructor(name, age, grade) {
+//     super(name, age);
+//     this.grade = grade;
+//   }
+
+//   study() {
+//     return `${this.name} is ${this.age} years old and is studying at ${this.name} grade`;
+//   }
+// }
+
+// const student = new Student("Harry", 15, 10);
+// console.log(student.study());
