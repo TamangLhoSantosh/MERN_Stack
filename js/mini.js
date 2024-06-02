@@ -37,3 +37,17 @@
 // counter.increment();
 // counter.increment();
 // console.log(counter.getCount());
+
+function processData(array, callback) {
+  let newArray = [];
+  for (let i = 0; i < array.length; i++) {
+    newArray.push(callback(array[i]));
+  }
+  return newArray;
+}
+
+function double(num) {
+  return num * 2;
+}
+
+console.log(processData([1, 2, 3, 4], double));
