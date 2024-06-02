@@ -170,3 +170,32 @@
 //   .catch((error) => {
 //     console.log(error);
 //   });
+
+// 13. Error Handling with Async/Await
+function fetchData() {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      if (Math.random() > 0.5) {
+        const data = [
+          { id: 1, name: "John", age: 40 },
+          { id: 2, name: "Harry", age: 65 },
+          { id: 3, name: "Arya", age: 56 },
+        ];
+        resolve(data);
+      } else {
+        reject("Failed to fetch data");
+      }
+    }, 2000);
+  });
+}
+
+async function getData() {
+  try {
+    const data = await fetchData();
+    console.log(data);
+  } catch (error) {
+    console.log(error);
+  }
+}
+
+getData();
