@@ -1,3 +1,4 @@
+// 1. Promise
 // function fetchData() {
 //   return new Promise((resolve) => {
 //     setTimeout(() => {
@@ -15,6 +16,7 @@
 //   console.log(data);
 // });
 
+// 2. Closure
 // function createCounter() {
 //   let count = 0;
 //   return {
@@ -28,12 +30,12 @@
 // }
 
 // const counter = createCounter();
-
 // counter.increment();
 // counter.increment();
 // counter.increment();
 // console.log(counter.getCount());
 
+// 3. Callback
 // function processData(array, callback) {
 //   let newArray = [];
 //   for (let i = 0; i < array.length; i++) {
@@ -48,6 +50,7 @@
 
 // console.log(processData([1, 2, 3, 4], double));
 
+// 4. Async/Await
 // function fetchData() {
 //   return new Promise((resolve) => {
 //     setTimeout(() => {
@@ -68,12 +71,14 @@
 
 // getData();
 
+// 5. Map
 // function doubleArray(array) {
 //   return array.map((number) => number * 2);
 // }
 
 // console.log(doubleArray([1, 2, 3, 4, 5]));
 
+// 6. Filter
 // function filterArray(array) {
 //   return array.filter((number) => number < 10);
 // }
