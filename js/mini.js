@@ -144,3 +144,29 @@
 
 // const student = new Student("Harry", 15, 10);
 // console.log(student.study());
+
+// 12. Error Handling with Promises
+// function fetchData() {
+//   return new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//       if (Math.random() > 0.5) {
+//         const data = [
+//           { id: 1, name: "John", age: 40 },
+//           { id: 2, name: "Harry", age: 65 },
+//           { id: 3, name: "Arya", age: 56 },
+//         ];
+//         resolve(data);
+//       } else {
+//         reject("Failed to fetch data");
+//       }
+//     }, 2000);
+//   });
+// }
+
+// fetchData()
+//   .then((data) => {
+//     console.log(data);
+//   })
+//   .catch((error) => {
+//     console.log(error);
+//   });
