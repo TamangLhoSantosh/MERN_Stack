@@ -1,5 +1,5 @@
 // function fetchData() {
-//   let promise = new Promise((resolve) => {
+//   return new Promise((resolve) => {
 //     setTimeout(() => {
 //       const data = [
 //         { id: 1, name: "John", age: 40 },
@@ -9,15 +9,11 @@
 //       resolve(data);
 //     }, 2000);
 //   });
-//   return promise;
 // }
 
-// async function getData() {
-//   const data = await fetchData();
+// fetchData().then((data) => {
 //   console.log(data);
-// }
-
-// getData();
+// });
 
 // function createCounter() {
 //   let count = 0;
@@ -38,16 +34,16 @@
 // counter.increment();
 // console.log(counter.getCount());
 
-function processData(array, callback) {
-  let newArray = [];
-  for (let i = 0; i < array.length; i++) {
-    newArray.push(callback(array[i]));
-  }
-  return newArray;
-}
+// function processData(array, callback) {
+//   let newArray = [];
+//   for (let i = 0; i < array.length; i++) {
+//     newArray.push(callback(array[i]));
+//   }
+//   return newArray;
+// }
 
-function double(num) {
-  return num * 2;
-}
+// function double(num) {
+//   return num * 2;
+// }
 
-console.log(processData([1, 2, 3, 4], double));
+// console.log(processData([1, 2, 3, 4], double));
