@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        /* table,
+        td,
+        th {
+            border: 1px solid red;
+            border-collapse: collapse;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        } */
+
+        th,
+        td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        tfoot {
+            background-color: #f9f9f9;
+        }
+    </style>
+</head>
+
+<body>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora error quidem praesentium aspernatur itaque eum,
+        dolor rerum sequi rem deserunt aliquid temporibus dolores suscipit ipsum dolorem veniam quia, dolore magni?</p>
+    <img src="https://images.unsplash.com/photo-1693924198149-e14ff98ed3f8?q=80&w=2787&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        height="500px" width="500px" style=" object-fit: cover;">
+
+    <p><b>This is a bold text.</b></p>
+    <p><strong>This is a strong text.</strong></p>
+    <p><i>This is italic text.</i></p>
+    <p><em>This is emphasize text.</em></p>
+    <p><small>This is small text.</small></p>
+    <p><mark>This is highlighted text.</mark></p>
+    <p>My name is <del>Santosh</del> Tamang.</p>
+    <p>My name is <ins>Santosh</ins>Tamang.</p>
+    <p>This is example of superscript x<Sup>2</Sup></p>
+    <p>This is example of subscript x<sub>2</sub></p>
+    <ul style="list-style-type:none;">
+        <li>Cricket</li>
+        <li>Football</li>
+        <li>Basketball</li>
+    </ul>
+    <ul style="list-style-type:circle;">
+        <li>Cricket</li>
+        <li>Football</li>
+        <li>Basketball</li>
+    </ul>
+    <ul style="list-style-type:disc;">
+        <li>Cricket</li>
+        <li>Football</li>
+        <li>Basketball</li>
+    </ul>
+    <ul style="list-style-type:square;">
+        <li>Cricket</li>
+        <li>Football</li>
+        <li>Basketball</li>
+    </ul>
+
+    <ol>
+        <li>Cricket</li>
+        <li>Football</li>
+        <li>Basketball</li>
+    </ol>
+    <ol type="A">
+        <li>Cricket</li>
+        <li>Football</li>
+        <li>Basketball</li>
+    </ol>
+    <ol type="a">
+        <li>Cricket</li>
+        <li>Football</li>
+        <li>Basketball</li>
+    </ol>
+    <ol type="I">
+        <li>Cricket</li>
+        <li>Football</li>
+        <li>Basketball</li>
+    </ol>
+    <ol type="i">
+        <li>Cricket</li>
+        <li>Football</li>
+        <li>Basketball</li>
+    </ol>
+    <ol start="10">
+        <li>Cricket</li>
+        <li>Football</li>
+        <li>Basketball</li>
+    </ol>
+    <table border="9">
+        <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Age</th>
+        </tr>
+        <tr>
+            <td>Santosh</td>
+            <td>Tamang</td>
+            <td>20</td>
+        </tr>
+        <tr>
+            <td>Kushal</td>
+            <td>Kafle</td>
+            <td>23</td>
+        </tr>
+    </table>
+
+    <form>
+        <label for="fname">First Name</label><br>
+        <input type="text" id="fname" name="fname"><br>
+        <label for="lname">Last Name</label><br>
+        <input type="text" id="lname" name="lname"><br>
+        <input type="submit" value="Submit"><br>
+    </form>
+
+    <form>
+        <textarea cols="50" rows="30"></textarea>
+    </form>
+
+    <form>
+        <select>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            <option value="others">Others</option>
+        </select>
+    </form>
+    <form>
+        <input type="radio" id="male" name="gender" value="male">
+        <label for="male">Male</label><br>
+        <input type="radio" id="female" name="gender" value="female">
+        <label for="male">Female</label><br>
+        <input type="radio" id="other" name="gender" value="other">
+        <label for="male">Others</label><br>
+    </form>
+
+    <form>
+        <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+        <label for="vehicle1"> I have a bike</label><br>
+        <input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
+        <label for="vehicle2"> I have a car</label><br>
+        <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
+        <label for="vehicle3"> I have a boat</label><br>
+    </form>
+
+    <form>
+        <input type="text" name="name1" id="name1" value="name1" placeholder="Enter the test" maxlength="30" size="20"
+            readonly disabled required autofocus>
+    </form>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Header 1</th>
+                <th>Header 2</th>
+                <th>Header 3</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Row 1, Cell 1</td>
+                <td>Row 1, Cell 2</td>
+                <td>Row 1, Cell 3</td>
+            </tr>
+            <tr>
+                <td>Row 2, Cell 1</td>
+                <td>Row 2, Cell 2</td>
+                <td>Row 2, Cell 3</td>
+            </tr>
+            <tr>
+                <td>Row 3, Cell 1</td>
+                <td>Row 3, Cell 2</td>
+                <td>Row 3, Cell 3</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td>Footer 1</td>
+                <td>Footer 2</td>
+                <td>Footer 3</td>
+            </tr>
+        </tfoot>
+    </table>
+
+    <embed src="../Finalized.pdf" width="600" height="500" type='application/pdf'>
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/qKmqyeewDrs?si=5dRaHOGQONQU7Mkn"
+        title="YouTube video player" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+
+    <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3532.6750335810116!2d85.36432797560884!3d27.696437025972347!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb1a306be3a127%3A0x9bf7eb5afb3881b0!2sPanini%20School!5e0!3m2!1sen!2snp!4v1717551152086!5m2!1sen!2snp"
+        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"></iframe>
+    <audio controls>
+        <source src="audio-file.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+    <video controls width="600" height="400">
+        <source src="video-file.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+</body>
+
+</html>

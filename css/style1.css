@@ -1,0 +1,45 @@
+* {
+  background-color: gray;
+}
+
+h1 {
+  color: red;
+}
+
+#resume,
+p,
+h2,
+a {
+  color: blue;
+}
+
+a:link {
+  color: #ff0000;
+}
+
+a:visited {
+  color: #00ff00;
+}
+
+a:hover {
+  color: #ff00ff;
+}
+
+a:active {
+  color: #0000ff;
+}
+
+h1::before {
+  content: "Hello ";
+}
+p::after {
+  content: "!";
+}
+
+.parent p {
+  color: greenyellow;
+}
+
+.parent div p {
+  color: white;
+}
