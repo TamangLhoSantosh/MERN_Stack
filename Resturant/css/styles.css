@@ -1,0 +1,147 @@
+/* Basic Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+/* Header Styling */
+header {
+  background-color: rgb(109, 109, 220);
+  color: #fff;
+  padding: 1rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header h1 {
+  padding-left: 10px;
+  margin-bottom: 0.5rem;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 1rem;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+}
+
+/* Hero Section */
+.hero img {
+  width: 100%;
+  height: auto;
+}
+
+/* Main Content Styling */
+main {
+  padding: 2rem;
+}
+
+.intro,
+.features,
+.menu,
+.contact-info,
+.contact-form {
+  margin-bottom: 2rem;
+}
+
+.features ul {
+  list-style-type: disc;
+  margin-left: 2rem;
+}
+
+/* Menu Page */
+.dish {
+  margin-bottom: 1.5rem;
+}
+
+.dish img {
+  max-width: 100%;
+  height: auto;
+}
+
+.dish h3 {
+  margin: 0.5rem 0;
+}
+
+.dish .price {
+  color: #d9534f;
+  font-weight: bold;
+}
+
+/* Contact Page */
+.contact-info img {
+  width: 100%;
+  height: auto;
+}
+
+.contact-form label {
+  display: block;
+  margin: 0.5rem 0 0.2rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.contact-form button {
+  padding: 0.7rem 1.5rem;
+  background: #333;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.contact-form button:hover {
+  background: #555;
+}
+
+/* Footer Styling */
+footer {
+  background-color: rgb(109, 109, 220);
+  color: #fff;
+  text-align: center;
+  padding: 1rem 0;
+  position: absolute;
+  width: 100%;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  nav ul li {
+    display: block;
+    margin: 0.5rem 0;
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    width: 100%;
+  }
+}
