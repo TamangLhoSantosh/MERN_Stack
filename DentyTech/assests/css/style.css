@@ -1,0 +1,159 @@
+/* .ascender {
+  font-family: "Ascender Serif W01 Bold";
+} */
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Ascender Serif W01 Bold";
+}
+
+.nav {
+  display: flex;
+  padding: 10px 10px;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.main-div,
+.footer {
+  padding: 5px 10px;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+}
+
+.name,
+#title {
+  text-transform: uppercase;
+}
+
+#title {
+  font-size: 20px;
+  border: 1.5px solid rgba(0, 0, 0, 0.473);
+  border-radius: 10px;
+  padding: 5px 7px;
+  font-weight: 500;
+}
+
+#icon {
+  border: 1.5px solid rgba(0, 0, 0, 0.473);
+  padding: 7px;
+  border-radius: 50%;
+}
+
+.name {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+#signup {
+  padding: 6px 10px;
+  border: 1px solid black;
+  border-radius: 10px;
+  font-weight: bold;
+}
+
+#login {
+  padding: 5px 8px;
+  border: 0px;
+  border-radius: 7px;
+  background-color: #ff6600;
+  color: white;
+}
+
+.main-div {
+  height: calc(100vh - 140px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#advantages {
+  font-size: 100px;
+  margin: auto auto;
+  position: absolute;
+}
+
+.images {
+  display: flex;
+  position: relative;
+}
+
+.images:hover {
+  height: 100%;
+  width: 100%;
+}
+
+img {
+  height: 300px;
+  width: 200px;
+  object-fit: cover;
+  position: absolute;
+  transition: all ease 0.5s;
+}
+
+#img-1 {
+  transform: translate(-50%, -50%) rotate(-30deg);
+}
+
+#img-2 {
+  transform: translate(-50%, -50%) rotate(-20deg);
+}
+
+#img-3 {
+  transform: translate(-50%, -50%) rotate(-10deg);
+}
+
+#img-4 {
+  transform: translate(-50%, -50%) rotate(0deg);
+}
+
+.images:hover #img-2 {
+  transform: rotate(0deg);
+  top: 0;
+  right: 0;
+}
+
+.images:hover #img-4 {
+  transform: rotate(0deg);
+  bottom: 0;
+  right: 0;
+}
+
+.images:hover #img-1 {
+  transform: rotate(0deg);
+  top: 0;
+  left: 0;
+}
+
+.images:hover #img-3 {
+  transform: rotate(0deg);
+  bottom: 0;
+  left: 0;
+}
+
+.footer {
+  padding: 10px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+}
+
+#icons {
+  display: flex;
+  gap: 4px;
+  justify-content: center;
+
+  margin-bottom: 2px;
+}
+
+.social i {
+  color: white;
+  padding: 4px;
+  border-radius: 50%;
+  background-color: #ff6600;
+}
