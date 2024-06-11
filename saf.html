@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .gird_contaimer {
+            display: grid;
+            grid-template-columns: 1fr 2sfr;
+            grid-template-rows: auto 1fr auto;
+            gap: 10px;
+            padding: 10px;
+            border: 2px solid #e0e0e0;
+            border-radius: 20px;
+        }
+
+        .header .sidebar .content .footer {
+            padding: 20px;
+            border: 2px solid #e0e0e0;
+            border-radius: 20px;
+            text-align: center;
+            font-size: 1.5 em;
+        }
+
+        .header {
+            background-color: greenyellow;
+            grid-column: 1/3;
+            grid-row: 1;
+        }
+
+        .sidebar {
+            background-color: blueviolet;
+            grid-column: 1;
+            grid-row: 2;
+        }
+
+        .content {}
+
+        .card {
+            margin: auto;
+            width: 300px;
+            border: 0px;
+            border-radius: 20px;
+            box-shadow: 10px 10px rgba(0, 0, 0, 0.01);
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            background-color: black;
+        }
+
+        .img {
+            height: 300px;
+            width: 100%;
+            background-color: grey;
+        }
+
+        .title {
+            padding: 20px;
+            background-color: white;
+            color: black;
+            font-size: 1.5em;
+        }
+
+        .subtitle {
+            color: black;
+            font-size: 16px;
+        }
+
+        .button {
+            padding: 10px;
+            background-color: black;
+            color: white;
+            text-align: center;
+            border-radius: 0 0 20px 20px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main-div">
+        <!-- <div class="grid-container">
+        <div class="header">Header</div>
+        <div class="sidebar">Sidebar</div>
+        <div class="content">Content</div>
+        <div class="Footer">Footer</div> -->
+        <!-- </div> -->
+
+        <div class="card">
+            <div class="img"></div>
+            <div class="title">
+                Card Title
+                <div class="subtitle">
+                    title is a description of card 1.
+                </div>
+            </div>
+            <div class="button">
+                Read More
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

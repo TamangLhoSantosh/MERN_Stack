@@ -1,0 +1,15 @@
+.hero {
+  height: 1000px;
+  width: 100%;
+  background-color: rebeccapurple;
+}
+
+.villan {
+  height: 200px;
+  width: 200px;
+  background-color: red;
+  position: fixed;
+  right: 50%;
+  bottom: 50%;
+  transform: translate(50%, 50%);
+}
