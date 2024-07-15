@@ -35,7 +35,10 @@
 // counter.increment();
 // console.log(counter.getCount());
 
+<<<<<<< Updated upstream
 // 3. Callback
+=======
+>>>>>>> Stashed changes
 // function processData(array, callback) {
 //   let newArray = [];
 //   for (let i = 0; i < array.length; i++) {
@@ -50,9 +53,14 @@
 
 // console.log(processData([1, 2, 3, 4], double));
 
+<<<<<<< Updated upstream
 // 4. Async/Await
 // function fetchData() {
 //   return new Promise((resolve) => {
+=======
+// function fetchData() {
+//   let promise = new Promise((resolve) => {
+>>>>>>> Stashed changes
 //     setTimeout(() => {
 //       const data = [
 //         { id: 1, name: "John", age: 40 },
@@ -62,6 +70,7 @@
 //       resolve(data);
 //     }, 2000);
 //   });
+<<<<<<< Updated upstream
 // }
 
 // async function getData() {
@@ -316,3 +325,7 @@
 // • Symbols: A new primitive data type for creating unique identifiers.
 // • Proxy and Reflect: New features for creating and handling proxies for objects.
 // • Async/await: A new way to write asynchronous code using a synchronous style.
+=======
+//   return promise;
+// }
+>>>>>>> Stashed changes

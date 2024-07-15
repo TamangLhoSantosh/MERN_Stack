@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.css" rel="stylesheet" />
+
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background: #f0f2f5;
+            font-family: Arial, sans-serif;
+        }
+
+        .form-container {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 300px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+
+        .form-group {
+            margin-bottom: 1rem;
+            position: relative;
+        }
+
+        label {
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+
+        input {
+            width: 100%;
+            padding: 0.5rem;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .password-container {
+            display: flex;
+            align-items: center;
+        }
+
+        .password-container input {
+            flex: 1;
+        }
+
+        .password-container i {
+            margin-left: -30px;
+            cursor: pointer;
+        }
+
+        button {
+            padding: 0.75rem;
+            border: none;
+            background: #007bff;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: background 0.3s ease;
+        }
+
+        button:hover {
+            background: #0056b3;
+        }
+
+        .error-message {
+            color: red;
+            font-size: 0.875rem;
+            margin-top: 0.25rem;
+            display: none;
+        }
+
+        .success-message {
+            color: green;
+            text-align: center;
+            font-size: 0.875rem;
+            margin-top: 1rem;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <h2>Java Script HTML Element</h2>
+    <p>Click the button to display the date.</p>
+    <button onclick=displayDate()>The time is?</button>
+    <button id="red" onclick=changecolor()>Change Color</button>
+    <button id="styleButton">Change style</button>
+    <p id="demo"></p> -->
+    <div class="form-container">
+        <form id="registerForm">
+            <h2>Register</h2>
+            <div class="form-group">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" required>
+                <small class="error-message"></small>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+                <small class="error-message"></small>
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <div class="password-container">
+                    <input type="password" id="password" name="password" required>
+                    <i class="ri-eye-line" id="togglePassword"></i>
+                </div>
+                <small class="error-message"></small>
+            </div>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+    <script>
+        // let color = 0;
+        // let style = 0;
+        // function displayDate() { document.getElementById("demo").innerHTML = Date(); }
+        // function changecolor() {
+        //     if (color === 0) {
+        //         color = 1;
+        //         document.getElementById("red").style.color = "blue";
+        //     } else {
+        //         color = 0;
+        //         document.getElementById("red").style.color = "red";
+        //     }
+        // }
+        // let button = document.getElementById("styleButton");
+        // button.addEventListener("click", function () {
+        //     alert("Button Clicked");
+        //     changeStyle();
+        // });
+        // function changeStyle() {
+        //     if (style === 0) {
+        //         style = 1;
+        //         button.style.color = "red";
+        //         button.style.fontSize = '20px';
+        //     }
+        //     else {
+        //         style = 0;
+        //         button.style.color = "black";
+        //         button.style.fontSize = '13.5px';
+        //     }
+        // }
+        // let paragraphElement = document.getElementById("demo");
+        // paragraphElement.style.color = "red";
+        // paragraphElement.style.fontSize = "20px"
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const form = document.getElementById('registerForm');
+            const togglePassword = document.getElementById('togglePassword');
+            const password = document.getElementById('password');
+            const username = document.getElementById('username');
+            const email = document.getElementById('email');
+
+            togglePassword.addEventListener('click', () => {
+                const type = password.type === 'password' ? 'text' : 'password';
+                password.type = type;
+                togglePassword.classList.toggle('ri-eye-line');
+                togglePassword.classList.toggle('ri-eye-off-line');
+            });
+
+            form.addEventListener('submit', (event) => {
+                event.preventDefault();
+                if (validateForm()) {
+                    alert(`Registration successful!\n\nUsername: ${username.value}\nEmail: ${email.value}`);
+                }
+            });
+
+            function validateForm() {
+                let isValid = true;
+
+                if (username.value.trim() === '') {
+                    setError(username, 'Username is required');
+                    isValid = false;
+                } else {
+                    clearError(username);
+                }
+
+                if (email.value.trim() === '') {
+                    setError(email, 'Email is required');
+                    isValid = false;
+                } else if (!validateEmail(email.value)) {
+                    setError(email, 'Enter a valid email');
+                    isValid = false;
+                } else {
+                    clearError(email);
+                }
+
+                if (password.value.trim() === '') {
+                    setError(password, 'Password is required');
+                    isValid = false;
+                } else if (password.value.length < 6) {
+                    setError(password, 'Password must be at least 6 characters');
+                    isValid = false;
+                } else {
+                    clearError(password);
+                }
+
+                return isValid;
+            }
+
+            function setError(input, message) {
+                const formGroup = input.closest('.form-group');
+                const errorDisplay = formGroup.querySelector('.error-message');
+                if (errorDisplay) {
+                    errorDisplay.textContent = message;
+                    errorDisplay.style.display = 'block';
+                }
+            }
+
+            function clearError(input) {
+                const formGroup = input.closest('.form-group');
+                const errorDisplay = formGroup.querySelector('.error-message');
+                if (errorDisplay) {
+                    errorDisplay.textContent = '';
+                    errorDisplay.style.display = 'none';
+                }
+            }
+
+            function validateEmail(email) {
+                const re = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+                return re.test(String(email).toLowerCase());
+            }
+        });
+    </script>
+</body>
+
+</html>

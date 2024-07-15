@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Navbar with Attractive Form</title>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+        }
+
+        nav {
+            background-color: #333;
+            display: flex;
+            color: white;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 20px;
+            position: relative;
+        }
+
+        p {
+            font-size: 18px;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        a {
+            color: white;
+            font-size: 18px;
+            text-decoration: none;
+            text-transform: uppercase;
+        }
+
+        .burger {
+            color: white;
+            display: none;
+            position: relative;
+        }
+
+        .line {
+            width: 25px;
+            height: 3px;
+            background-color: white;
+            margin: 5px;
+        }
+
+        .container {
+            margin: 50px auto;
+            width: 80%;
+            max-width: 300px;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-group {
+            margin: 10px 0;
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            font-size: 14px;
+            margin-bottom: 5px;
+        }
+
+        input[type="text"],
+        input[type="date"],
+        input[type="number"],
+        input[type="email"] {
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        input[type="submit"] {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 16px;
+            color: white;
+            background-color: #333;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #555;
+        }
+
+        @media screen and (max-width: 620px) {
+            .nav-links {
+                top: 60px;
+                left: 0;
+                width: 100%;
+                display: none;
+                position: absolute;
+                background-color: #333;
+                flex-direction: column;
+            }
+
+            li {
+                margin: 30px 0;
+            }
+
+            a {
+                border-bottom: 2px solid white;
+            }
+
+            .burger {
+                display: block;
+            }
+
+            .burger:hover {
+                cursor: pointer;
+            }
+        }
+
+        .nav-active {
+            display: flex !important;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <div class="logo">
+                <p>Logo</p>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+            <div class="burger">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+        </nav>
+    </header>
+
+    <form class="container">
+        <h2>Details</h2>
+        <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" name="name" placeholder="Enter your name">
+        </div>
+        <div class="form-group">
+            <label for="dob">Date Of Birth</label>
+            <input type="date" name="dob">
+        </div>
+        <div class="form-group">
+            <label for="contact">Contact No</label>
+            <input type="number" name="contact" placeholder="Enter your contact number">
+        </div>
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" name="email" placeholder="Enter your email">
+        </div>
+        <input type="submit" value="Submit">
+    </form>
+
+    <script>
+        const burger = document.querySelector('.burger');
+        const nav = document.querySelector('.nav-links');
+
+        burger.addEventListener('click', () => {
+            nav.classList.toggle('nav-active');
+        });
+    </script>
+
+</body>
+
+</html>

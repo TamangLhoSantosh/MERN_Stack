@@ -1,27 +1,66 @@
 import React from "react";
-import Navbar from "./Navbar";
+import Navbar from "./components/Navbar/Navbar";
 import "./App.css";
+import CounterParent from "./components/Counter/Counter";
+import MessageParent from "./components/Message/Message";
+import ToggleParent from "./components/Toogle/Toogle";
+import Home from "./Home";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Card from "./components/Card/Card";
+import Shop from "./components/Shop";
+import Functional from "./components/FunctionalComponent/Functional";
 
 function App() {
+  const data = [
+    {
+      imageUrl:
+        "https://archive.org/download/placeholder-image/placeholder-image.jpg",
+      title: "Title 1",
+      description:
+        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum accusamus accusantium rem! Atque quidem similique, vitae doloribus",
+    },
+    {
+      imageUrl:
+        "https://archive.org/download/placeholder-image/placeholder-image.jpg",
+      title: "Title 2",
+      description:
+        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum accusamus accusantium rem! Atque quidem similique, vitae doloribus",
+    },
+    {
+      imageUrl:
+        "https://archive.org/download/placeholder-image/placeholder-image.jpg",
+      title: "Title 3",
+      description:
+        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum accusamus accusantium rem! Atque quidem similique, vitae doloribus",
+    },
+    {
+      imageUrl:
+        "https://archive.org/download/placeholder-image/placeholder-image.jpg",
+      title: "Title 4",
+      description:
+        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum accusamus accusantium rem! Atque quidem similique, vitae doloribus",
+    },
+    {
+      imageUrl:
+        "https://archive.org/download/placeholder-image/placeholder-image.jpg",
+      title: "Title 5",
+      description:
+        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum accusamus accusantium rem! Atque quidem similique, vitae doloribus",
+    },
+  ];
   return (
-    <div className="App">
-      <Navbar />
-      <section id="home">
-        <h1>Home</h1>
-        <p>Welcome to the Home section.</p>
-      </section>
-      <section id="about">
-        <h1>About</h1>
-        <p>Learn more About us.</p>
-      </section>
-      <section id="services">
-        <h1>Services</h1>
-        <p>Discover our Services.</p>
-      </section>
-      <section id="contact">
-        <h1>Contact</h1>
-        <p>Get in touch with us.</p>
-      </section>
+    <div className="container mx-auto max-h-screen mt-10">
+      {/* <Card data={data} /> */}
+      {/* <BrowserRouter>
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <CounterParent />
+          <MessageParent />
+          <ToggleParent />
+        </Routes>
+      </BrowserRouter>  */}
+      <Functional />
     </div>
   );
 }

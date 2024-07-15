@@ -1,0 +1,95 @@
+/* CSS Variables for Light and Dark Themes */
+:root {
+  --background-color-light: #ffffff;
+  --text-color-light: #000000;
+  --background-color-dark: #121212;
+  --text-color-dark: #ffffff;
+  --primary-color: #6200ee;
+}
+
+/* General Styles */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: var(--background-color-light);
+  color: var(--text-color-light);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+header,
+footer {
+  padding: 1rem;
+  background-color: var(--primary-color);
+  color: var(--text-color-dark);
+  text-align: center;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-links a {
+  margin: 0 0.5rem;
+  text-decoration: none;
+  color: var(--text-color-dark);
+}
+
+.carousel {
+  display: flex;
+  overflow: hidden;
+  position: relative;
+}
+
+.carousel-slide {
+  min-width: 100%;
+  transition: transform 0.5s;
+}
+
+.carousel-control {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  border: none;
+  color: white;
+  cursor: pointer;
+  padding: 0.5rem;
+  z-index: 10;
+}
+
+.carousel-control.prev {
+  left: 0;
+}
+
+.carousel-control.next {
+  right: 0;
+}
+
+.cards {
+  display: flex;
+  justify-content: space-around;
+  padding: 1rem;
+}
+
+.card {
+  background-color: var(--background-color-light);
+  color: var(--text-color-light);
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+footer {
+  background-color: var(--primary-color);
+  color: var(--text-color-dark);
+}
+
+.dark-mode {
+  --background-color-light: #121212;
+  --text-color-light: #ffffff;
+  --background-color-dark: #ffffff;
+  --text-color-dark: #000000;
+}
