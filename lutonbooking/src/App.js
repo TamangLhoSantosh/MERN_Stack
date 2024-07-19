@@ -1,68 +1,21 @@
 import React from "react";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Navbar from "./components/Navbar/Navbar";
-import "./App.css";
-import CounterParent from "./components/Counter/Counter";
-import MessageParent from "./components/Message/Message";
-import ToggleParent from "./components/Toogle/Toogle";
-import Home from "./Home";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Card from "./components/Card/Card";
-import Shop from "./components/Shop";
-import Functional from "./components/FunctionalComponent/Functional";
+import Login from "./components/Login/Login";
+import Signup from "./components/Signup/Signup";
+import ContactUs from "./components/ContactUs/ContactUs";
 
-function App() {
-  const data = [
-    {
-      imageUrl:
-        "https://archive.org/download/placeholder-image/placeholder-image.jpg",
-      title: "Title 1",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum accusamus accusantium rem! Atque quidem similique, vitae doloribus",
-    },
-    {
-      imageUrl:
-        "https://archive.org/download/placeholder-image/placeholder-image.jpg",
-      title: "Title 2",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum accusamus accusantium rem! Atque quidem similique, vitae doloribus",
-    },
-    {
-      imageUrl:
-        "https://archive.org/download/placeholder-image/placeholder-image.jpg",
-      title: "Title 3",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum accusamus accusantium rem! Atque quidem similique, vitae doloribus",
-    },
-    {
-      imageUrl:
-        "https://archive.org/download/placeholder-image/placeholder-image.jpg",
-      title: "Title 4",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum accusamus accusantium rem! Atque quidem similique, vitae doloribus",
-    },
-    {
-      imageUrl:
-        "https://archive.org/download/placeholder-image/placeholder-image.jpg",
-      title: "Title 5",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum accusamus accusantium rem! Atque quidem similique, vitae doloribus",
-    },
-  ];
+const App = () => {
   return (
-    <div className="container mx-auto max-h-screen mt-10">
-      {/* <Card data={data} /> */}
-      {/* <BrowserRouter>
-        <Navbar />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <CounterParent />
-          <MessageParent />
-          <ToggleParent />
-        </Routes>
-      </BrowserRouter>  */}
-      <Functional />
-    </div>
+    <Router>
+      <Navbar />
+      <Routes>
+        <Route path="/login" element={<Login />} />
+        <Route path="/signup" element={<Signup />} />
+        <Route path="/contact" element={<ContactUs />} />
+      </Routes>
+    </Router>
   );
-}
+};
 
 export default App;
